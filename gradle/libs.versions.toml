@@ -1,0 +1,33 @@
+[versions]
+spring-boot = "4.0.0"
+spring-data-mongodb = "4.0.0"
+java = "23"
+junit = "5.11.0"
+assertj = "3.26.0"
+cucumber = "8.0.0"
+testcontainers = "1.20.0"
+lombok = "1.18.36"
+
+[libraries]
+spring-boot-starter-data-mongodb = { group = "org.springframework.boot", name = "spring-boot-starter-data-mongodb" }
+spring-boot-starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
+spring-boot-starter-validation = { group = "org.springframework.boot", name = "spring-boot-starter-validation" }
+
+testcontainers-mongodb = { group = "org.testcontainers", name = "mongodb" }
+testcontainers-junit-jupiter = { group = "org.testcontainers", name = "junit-jupiter" }
+testcontainers-cassandra = { group = "org.testcontainers", name = "cassandra" }
+testcontainers-redis = { group = "org.testcontainers", name = "redis" }
+testcontainers-postgresql = { group = "org.testcontainers", name = "postgresql" }
+
+cucumber-java = { group = "io.cucumber", name = "cucumber-java" }
+cucumber-spring = { group = "io.cucumber", name = "cucumber-spring" }
+cucumber-junit-platform-engine = { group = "io.cucumber", name = "cucumber-junit-platform-engine" }
+
+assertj-core = { group = "org.assertj", name = "assertj-core" }
+junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter" }
+
+lombok = { group = "org.projectlombok", name = "lombok" }
+
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-boot" }
