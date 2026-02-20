@@ -7,9 +7,6 @@ import com.course.mongodb.m01.service.AccountService;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.zh_cn.假如;
-import io.cucumber.java.z當;
-import io.cucumber.java.zhh_cn._cn.那麼;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.math.BigDecimal;
@@ -19,9 +16,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class AccountSteps {
 
     @Autowired
-    private;
+    private AccountService accountService;
 
-    private Bank AccountService accountServiceAccount account;
+    private BankAccount account;
     private Exception exception;
 
     @Given("客戶 {string} 已通過 KYC 驗證")
@@ -55,12 +52,6 @@ public class AccountSteps {
     @When("存入 {int} 元")
     public void 存入元(int amount) {
         accountService.deposit(account.getAccountNumber(), Money.of(new BigDecimal(amount)));
-    }
-
-    @Then("帳戶餘額為 {int} 元")
-    public void 帳戶餘額為元AfterDeposit(int amount) {
-        account = accountService.findByAccountNumber(account.getAccountNumber());
-        assertThat(account.getBalance().amount()).isEqualByComparingTo(new BigDecimal(amount));
     }
 
     @When("提款 {int} 元")
